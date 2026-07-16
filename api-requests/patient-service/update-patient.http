@@ -1,0 +1,12 @@
+### updating the existing patient details
+PUT http://localhost:4000/patients/123e4567-e89b-12d3-a456-426614174004
+Content-Type: application/json
+
+{
+  "name": "kuldeep gandu chutiya",
+  "email": "kuldeepjantu4220@gmail.com",
+  "dateOfBirth": "2001-01-15",
+  "address": "mp"
+}
+
+###

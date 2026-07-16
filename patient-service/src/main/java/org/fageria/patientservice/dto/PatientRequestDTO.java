@@ -4,6 +4,7 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
+import org.fageria.patientservice.dto.validator.CreatePatientValidationGroup;
 
 @Data
 public class PatientRequestDTO {
@@ -21,6 +22,6 @@ public class PatientRequestDTO {
     @NotBlank(message = "DOB is required")
     private String dateOfBirth;
 
-    @NotBlank(message = "registered date is required")
+    @NotBlank(groups = CreatePatientValidationGroup.class ,message = "registered date is required")
     private String registeredDate;
 }
